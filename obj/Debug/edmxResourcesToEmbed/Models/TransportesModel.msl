@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TransportesModelStoreContainer" CdmEntityContainer="TransportesEntities">
+    <EntitySetMapping Name="bitacoraProductos">
+      <EntityTypeMapping TypeName="TransportesModel.bitacoraProductos">
+        <MappingFragment StoreEntitySet="bitacoraProductos">
+          <ScalarProperty Name="id_bitacora_prod" ColumnName="id_bitacora_prod" />
+          <ScalarProperty Name="producto_id" ColumnName="producto_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Camiones">
+      <EntityTypeMapping TypeName="TransportesModel.Camiones">
+        <MappingFragment StoreEntitySet="Camiones">
+          <ScalarProperty Name="id_Camion" ColumnName="id_Camion" />
+          <ScalarProperty Name="matricula" ColumnName="matricula" />
+          <ScalarProperty Name="tipo_Camion" ColumnName="tipo_Camion" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+          <ScalarProperty Name="kilometraje" ColumnName="kilometraje" />
+          <ScalarProperty Name="url_Foto" ColumnName="url_Foto" />
+          <ScalarProperty Name="disponibilidad" ColumnName="disponibilidad" />
+          <ScalarProperty Name="Chofer_ID" ColumnName="Chofer_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cargamento">
+      <EntityTypeMapping TypeName="TransportesModel.Cargamento">
+        <MappingFragment StoreEntitySet="Cargamento">
+          <ScalarProperty Name="id_cargamento" ColumnName="id_cargamento" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="alto" ColumnName="alto" />
+          <ScalarProperty Name="ancho" ColumnName="ancho" />
+          <ScalarProperty Name="profundidad" ColumnName="profundidad" />
+          <ScalarProperty Name="ruta_id" ColumnName="ruta_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cargamentos_Productos">
+      <EntityTypeMapping TypeName="TransportesModel.Cargamentos_Productos">
+        <MappingFragment StoreEntitySet="Cargamentos_Productos">
+          <ScalarProperty Name="id_cp" ColumnName="id_cp" />
+          <ScalarProperty Name="cargamento_id" ColumnName="cargamento_id" />
+          <ScalarProperty Name="producto_id" ColumnName="producto_id" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Choferes">
+      <EntityTypeMapping TypeName="TransportesModel.Choferes">
+        <MappingFragment StoreEntitySet="Choferes">
+          <ScalarProperty Name="idchofer" ColumnName="idchofer" />
+          <ScalarProperty Name="licencia" ColumnName="licencia" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido_p" ColumnName="apellido_p" />
+          <ScalarProperty Name="apellido_m" ColumnName="apellido_m" />
+          <ScalarProperty Name="disponibilidad" ColumnName="disponibilidad" />
+          <ScalarProperty Name="url_foto" ColumnName="url_foto" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direcciones">
+      <EntityTypeMapping TypeName="TransportesModel.Direcciones">
+        <MappingFragment StoreEntitySet="Direcciones">
+          <ScalarProperty Name="id_direccion" ColumnName="id_direccion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="colonia" ColumnName="colonia" />
+          <ScalarProperty Name="cp" ColumnName="cp" />
+          <ScalarProperty Name="calle" ColumnName="calle" />
+          <ScalarProperty Name="num_ext" ColumnName="num_ext" />
+          <ScalarProperty Name="num_int" ColumnName="num_int" />
+          <ScalarProperty Name="referencias" ColumnName="referencias" />
+          <ScalarProperty Name="cruzamientos" ColumnName="cruzamientos" />
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="TransportesModel.Productos">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="id_producto" ColumnName="id_producto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rutas">
+      <EntityTypeMapping TypeName="TransportesModel.Rutas">
+        <MappingFragment StoreEntitySet="Rutas">
+          <ScalarProperty Name="id_ruta" ColumnName="id_ruta" />
+          <ScalarProperty Name="distancia" ColumnName="distancia" />
+          <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
+          <ScalarProperty Name="hora_salida" ColumnName="hora_salida" />
+          <ScalarProperty Name="fecha_llegada_estimada" ColumnName="fecha_llegada_estimada" />
+          <ScalarProperty Name="fecha_llegada" ColumnName="fecha_llegada" />
+          <ScalarProperty Name="hora_llegada" ColumnName="hora_llegada" />
+          <ScalarProperty Name="tiempo_viaje" ColumnName="tiempo_viaje" />
+          <ScalarProperty Name="camion_id" ColumnName="camion_id" />
+          <ScalarProperty Name="FK_Origen" ColumnName="FK_Origen" />
+          <ScalarProperty Name="FK_Destino" ColumnName="FK_Destino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Camiones_Choferes">
+      <EntityTypeMapping TypeName="TransportesModel.Camiones_Choferes">
+        <MappingFragment StoreEntitySet="Camiones_Choferes">
+          <ScalarProperty Name="Nombre_chofer" ColumnName="Nombre_chofer" />
+          <ScalarProperty Name="Chofer_ID" ColumnName="Chofer_ID" />
+          <ScalarProperty Name="disponibilidad" ColumnName="disponibilidad" />
+          <ScalarProperty Name="url_Foto" ColumnName="url_Foto" />
+          <ScalarProperty Name="kilometraje" ColumnName="kilometraje" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="tipo_Camion" ColumnName="tipo_Camion" />
+          <ScalarProperty Name="matricula" ColumnName="matricula" />
+          <ScalarProperty Name="id_Camion" ColumnName="id_Camion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

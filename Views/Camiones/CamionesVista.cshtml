@@ -1,0 +1,59 @@
+﻿@model List<TransportesMVC.Models.ViewModels.Camiones_ChoferesLista>
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-12 style="text-align:right;">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped table-bordered table-responsive">
+            <tr>
+                <th>id_Camion</th>
+                <th>matricula</th>
+                <th>tipo_Camion</th>
+                <th>marca</th>
+                <th>modelo</th>
+                <th>capacidad</th>
+                <th>kilometraje</th>
+                <th>url_Foto</th>
+                <th>Nombre Chofer</th>
+                <th>disponibilidad</th>
+                @foreach (var Elemento in Model)
+                {
+                <tr>
+                    <td>@Elemento.id_Camion</td>
+                    <td>@Elemento.matricula</td>
+                    <td>@Elemento.tipo_Camion</td>
+                    <td>@Elemento.marca</td>
+                    <td>@Elemento.modelo</td>
+                    <td>@Elemento.capacidad</td>
+                    <td>@Elemento.kilometraje</td>
+                    <td>
+                        <img src="@Elemento.url_Foto" alt="imagen del camión" />
+                    </td>
+                    <td>@Elemento.Nombre_chofer</td>
+
+                    <td style="text-align:center;">
+                        <input type="checkbox" disabled="disabled" @(Elemento.disponibilidad ? "chequed" : "") />
+                    </td>
+
+                    <td>
+                        <a class="btn btn-warning" href="">
+                            <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                        </a>
+                        <a class="btn btn-danger" href="">
+                            <i class="fa-solid fa-trash-can" style="color: #ffffff;"></i>
+                        </a>
+                    </td>
+                </tr>
+
+            }
+            </table>
+        </div>
+    </div>
+
+
+

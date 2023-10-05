@@ -1,0 +1,67 @@
+﻿@model TransportesMVC.Models.Camiones
+@{
+    ViewBag.Title = "Editar_Camion";
+}
+
+@using (Html.BeginForm("Editar_Camion", "Camiones", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-md-12">
+            @*Envian y recuperan información en 2do plano ya que no se muestran como controles
+                en la vista pero si esán presentes en las transiciones del mundo*@
+            @Html.HiddenFor(c => c.id_Camion)
+            @Html.HiddenFor(c => c.url_Foto)
+
+            <div>
+                @Html.LabelFor(c => c.matricula)
+                @Html.TextBoxFor(c => c.matricula, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.matricula, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(c => c.tipo_Camion)
+                @Html.TextBoxFor(c => c.tipo_Camion, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.tipo_Camion, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(c => c.marca)
+                @Html.TextBoxFor(c => c.marca, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.marca, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(c => c.modelo)
+                @Html.TextBoxFor(c => c.modelo, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.modelo, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(c => c.capacidad)
+                @Html.TextBoxFor(c => c.capacidad, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.capacidad, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(c => c.kilometraje)
+                @Html.TextBoxFor(c => c.kilometraje, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(c => c.kilometraje, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.url_Foto)
+
+                <input type="file" name="imagen" id="imagen" />
+            </div>
+            <div>
+                @Html.LabelFor(c => c.disponibilidad)
+                @Html.CheckBoxFor(c => c.disponibilidad, new { @class = "form-check-input" })
+            </div>
+            <div>
+                @Html.Label("Chofer")
+                @Html.DropDownListFor(c => c.Chofer_ID, new SelectList(ViewBag.ListaChoferes,
+               "Id_Chofer", "Nombre"), new { @class = "form-control" })
+            </div>
+            <div style="text-align:right;">
+                <input value="Guardar" class="btn btn-success" type="submit" />
+            </div>
+        </div>
+    </div>
+
+}
+
+

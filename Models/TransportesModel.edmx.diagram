@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="571b78ae887147cc8f5b2fde4b304cdf" Name="Diagram1">
+        <EntityTypeShape EntityType="TransportesModel.bitacoraProductos" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportesModel.Camiones" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportesModel.Cargamento" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportesModel.Cargamentos_Productos" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportesModel.Choferes" Width="1.5" PointX="1.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportesModel.Direcciones" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportesModel.Productos" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportesModel.Rutas" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="TransportesModel.FK__Camiones__Chofer__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportesModel.FK__Rutas__camion_id__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportesModel.FK__Cargament__carga__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportesModel.FK__Cargament__ruta___3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportesModel.FK__Cargament__produ__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportesModel.FK__Rutas__FK_Destin__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="TransportesModel.FK__Rutas__FK_Origen__2C3393D0" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TransportesModel.Camiones_Choferes" Width="1.5" PointX="7.375" PointY="8.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
